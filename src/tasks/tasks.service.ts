@@ -6,13 +6,14 @@ import { Repository } from 'typeorm';
 import { Task } from './entities/task.entity';
 import { PaginationDto } from 'src/common/dtos/pagination.dto';
 import { User } from 'src/auth/entities/users.entity';
+import { LoggerService } from 'src/services/logger/logger.service';
 
 @Injectable()
 export class TasksService {
 
   constructor(
     @InjectRepository(Task)
-    private readonly taskRepository: Repository<Task>
+    private readonly taskRepository: Repository<Task>,
   ) { }
 
   async create(createTaskDto: CreateTaskDto, user: User) {
@@ -31,6 +32,7 @@ export class TasksService {
   findAll(paginationDto: PaginationDto) {
     const { limit = 5, offset = 0 } = paginationDto;
     try {
+
       const tasks = this.taskRepository.find({
         take: limit,
         skip: offset,
