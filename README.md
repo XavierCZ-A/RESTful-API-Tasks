@@ -5,9 +5,9 @@
 
 # RESTful API - Sistema de Gestión de Tareas
 
-1. Clonar proyecto
+1. Clonar proyecto y entrar a la carpeta
 ```
-git clone https://github.com/xavie-dev/nextline-test.git
+git clone https://github.com/XavierCZ-A/RESTful-API-Tasks.git
 ```
 2. Instalar dependencias
 ```
