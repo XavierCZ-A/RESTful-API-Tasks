@@ -28,3 +28,7 @@ docker-compose up -d
 ```
 npm run start:dev
 ```
+
+## Documentación
+
+http://localhost:3000/api
